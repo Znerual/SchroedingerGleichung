@@ -1,8 +1,9 @@
-#set term pdfcairo
-#set outp "vergleich.pdf"
+set term pdfcairo
+set outp "Teilchent20.pdf"
 
-plot "psi_lsg.dat" using 1 : 2 w l #, "psi_t_x.dat" using 1 : 2 w l
+set title "t=20"
 
-pause -1
-#unset term
-#unset outp
+plot "psi_lsg.dat" using 1 : 2 w l title "exakt" , "psi_t_x.dat" using 1 : 2 w l title "diskret"
+
+unset term
+unset outp
